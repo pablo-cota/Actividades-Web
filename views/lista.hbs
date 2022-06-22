@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <title>Lista</title>
+</head>
+<body>
+    {{>header}}
+    <div class="columns" style="padding: 20px; margin-left:90px">
+
+
+     <table class="table is-striped">
+  <thead>
+    <tr>
+      <th><abbr title="Position">Título</abbr></th>
+      <th>Contenido</th>
+      <th><abbr title="Won">Editar/Eliminar</abbr></th>
+    </tr>
+  </thead>
+
+  <tbody>
+        {{# each notes1}}
+     <br />
+    <tr>
+      <td> {{title}}</td>
+      <td>{{body}}</td>&nbsp;
+       <td>&nbsp;&nbsp;&nbsp;&nbsp; <a  href="/actualizar/{{id}}" ><img src="https://cdn-icons-png.flaticon.com/512/32/32355.png" title="Editar" alt="Editar" width="10px"></a> &nbsp;
+         <a href="/delete/{{id}}"><img src="https://e7.pngegg.com/pngimages/36/528/png-clipart-computer-icons-button-wiki-delete-button-angle-rectangle.png" title="Borrar" alt="Borrar" width="10px"></a></td>
+    
+    </tr>
+   {{/each}}
+  </tbody>
+</table>
+
+</div>
+
+
+<br><br><br><br><br><br>  
+<br><br><br><br><br><br>  
+{{>footer}}
+</body>
+</html>
